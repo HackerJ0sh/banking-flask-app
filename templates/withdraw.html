@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="withdraw-container"> 
+    <div class="withdraw-card-balance">
+      <div class="withdraw-balance"><p>${{ balance }}</p></div>
+      <div class="withdraw-card">
+        <h1>BANK OF JOSHUA</h1>
+        <div class="withdraw-card-row-1">
+          <p>{{ card_number }}</p>
+          <p>06/28</p>
+        </div>
+        <div class="withdraw-card-row-2">
+          <p>{{ card_name }}</p>
+          <P>{{ card_cvv }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="withdraw-console">
+        <form method="post" class="withdraw-form">
+          <label for="withdraw-amt" class="transaction-label">Enter Withdraw Amount</label><br>
+          <input type="text" name="withdraw-amt" class="withdraw-amt" minlength="1" required><br>
+          <label for="withdraw-pin" class="transaction-label">Enter Pin Number</label><br>
+          <input type="password" name="withdraw-pin" class="deposit-amt" maxlength="4" required><br>
+          <div>
+          <input type="submit" value="WITHDRAW" class="withdraw-submit-btn">
+          </div>
+        </form>
+        <div class="withdraw-home-btn"><a href="{{ url_for('user_home_page') }}">RETURN HOME</a></div>
+    </div>
+</div>
+
+
+<div class="investment-table-content transaction-history-content">
+  <h1 class="it-table-header">Transaction History</h1>
+  <div class="investment-table">
+      <table class="it tt">
+          <tr class="it-row-header">
+              <td class="it-header">To</td>
+              <td class="it-header">From</td>
+              <td class="it-header" colspan="3">Amount</td>
+              <td class="it-header">Date</td>
+              <td class="it-header">Time</td>
+          </tr>
+          {% if transaction_history %}
+              {% for history in transaction_history %}
+              <tr class="it-rows">
+                <td class="it-cells">{{ history.receive_user }}</td>
+                <td class="it-cells">{{ history.transfered_user }}</td>
+                <td class="it-cells" colspan="3">{{ history.transaction_amt }}</td>
+                <td class="it-cells">{{ history.date }}</td>
+                <td class="it-cells">{{ history.time }}</td>
+              </tr>
+              {% endfor %}
+          {% else %}
+          <tr class="it-rows">
+              <td class="it-cells">-</td>
+              <td class="it-cells">-</td>
+              <td class="it-cells" colspan="3">$-</td>
+              <td class="it-cells">-</td>
+              <td class="it-cells">-</td>
+          </tr>
+          {% endif %}
+      </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../static/style/base.css" type="text/css">
+    <link rel="stylesheet" href="../static/style/home.css" type="text/css">
+    <link rel="stylesheet" href="../static/style/login.css" type="text/css">
+    <link rel="stylesheet" href="../static/style/transaction.css" type="text/css">
+    <link rel="stylesheet" href="../static/style/signup.css" type="text/css">
+    <link rel="stylesheet" href="../static/style/user.css" type="text/css">
+    <link rel="stylesheet" href="../static/style/investment.css" type="text/css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo"><p class="nav-text"><a href="{{ url_for('home') }}">Logo</a></p></div>
+        <div class="links">
+            <ul class="navbar-links">
+                <li class="navbar-link"><a href="{{ url_for('user_home_page') }}"><p class="nav-text">Balance</p></a></li>
+                <li class="navbar-link"><a href="{{ url_for('withdraw') }}"><p class="nav-text">Withdraw</p></a></li>
+                <li class="navbar-link"><a href="{{ url_for('deposit') }}"><p class="nav-text">Deposit</p></a></li>
+                <li class="navbar-link"><a href="{{ url_for('transfer') }}"><p class="nav-text">Transfer</p></a></li>
+            </ul>
+        </div>
+        <div id="dropdown"><p class="nav-text">=</p></div>
+    </div>
+    <div class="dropdown-content" id="dd-c">
+        <ul class="dropdown-links" id="dd-l">
+            <li class="dropdown-link dropdown-link-mobile"><a href="{{ url_for('user_home_page') }}">Balance</a></li>
+            <li class="dropdown-link dropdown-link-mobile"><a href="{{ url_for('withdraw') }}">Withdraw</a></li>
+            <li class="dropdown-link dropdown-link-mobile"><a href="{{ url_for('deposit') }}">Deposit</a></li>
+            <li class="dropdown-link dropdown-link-mobile"><a href="{{ url_for('transfer') }}">Transfer</a></li>
+            <li class="dropdown-link"><a href="{{ url_for('login') }}">Login</a></li>
+            <li class="dropdown-link"><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            <li class="dropdown-link"><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="flash-msg-div" id="flash-msg-div">
+            <p class="flash-msg"> {{ message }} </p>
+            <div class="flash-btn-container">
+                <button type="button" onclick="flashCancel()" class="flash-btn" id="flash-btn">x</button>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+    <footer>
+        <div class="footer">
+            <p class="footer-content">@ Made By Joshua Lim</p>
+        </div>
+    </footer>
+    <script src="../static/js/navbar.js" type="text/javascript"></script>
+</body>
+
+</html>

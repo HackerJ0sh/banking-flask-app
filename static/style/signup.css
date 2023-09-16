@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+.signup-form-section {
+    color: white;
+}
+  
+html {
+    font-family: system-ui;
+    background-color: #365a08;
+}
+  
+.signup-form {
+    padding: 20px 30px; 
+    width: 300px;
+    height: fit-content;
+    margin: 50px auto 50px auto;  /* changed 3.54pm fri 8 sep */
+    border-radius: 20px;
+    background-color: #1b1d24;
+}
+  
+.signup-form h2 {
+    text-align: center;
+    margin: 20px 0px 20px 0px
+}
+  
+.signup-input {
+    width: calc(300px - 32px);   /* 200px */
+    padding: 10px 16px;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid white;
+}
+  
+input[type="submit"].signup-submit {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 20px 0px 20px 0px;
+    color: white;
+    background-color: #72eb3a;
+    border: none;
+    font-weight: bold;
+}
+  
+  
+  
+  
+  
+  

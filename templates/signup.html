@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="signup-form-section">
+    <div class="signup-form">
+        <h2>SIGN UP</h2>
+        <form method="post">
+            <label for="signup-user" class="signup-label">Username</label><br>
+            <input type="text" name="signup-user" class="signup-input" minlength="5"><br>
+            <label for="signup-pwd" class="signup-label">Password</label><br>
+            <input type="password" name="signup-pwd" class="signup-input" minlength="8"><br>
+            <label for="signup-pwd" class="signup-label">Re Enter Password</label><br>
+            <input type="password" name="signup-repeat-pwd" class="signup-input" minlength="8"><br>
+            <label for="signup-pin" class="signup-label">Create Pin Number</label><br>
+            <input type="password" name="signup-pin" class="signup-input" maxlength="4"><br>
+            <label for="signup-card-num" class="signup-label">Credit Card Number</label><br>
+            <input type="text" name="signup-card-num" id="signup-card-num" inputmode="numeric" class="signup-input" placeholder="1111 2222 3333 4444" maxlength="16"><br>
+            <label for="signup-card-cvv" class="signup-label">CVV</label><br>
+            <input type="text" name="signup-card-cvv" id="signup-card-cvv" inputmode="numeric" class="signup-input" placeholder="369" maxlength="3"><br>
+            <label for="signup-card-name" class="signup-label">Card Holder Name</label><br>
+            <input type="text" name="signup-card-name" id="signup-card-name" class="signup-input" placeholder="Mr Joshua Lim Jun Kai">
+            <label for="signup-balance" class="signup-label">Card Balance</label><br>
+            <input type="text" name="signup-balance" id="signup-balance" class="signup-input" inputmode="numeric" placeholder="e.g. 1000">
+            <input type="submit" value="SIGN UP" class="signup-submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

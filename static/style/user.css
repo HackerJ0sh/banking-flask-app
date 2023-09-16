@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    background-color: #365a08;
+    color: white; 
+    font-family: system-ui;
+    font-weight: bold;
+}
+  
+div.user-home-page, .uhp-console-btns {
+    display: flex;
+    justify-content: space-around;
+}
+  
+div.user-home-page {
+    flex-wrap: wrap;
+}
+  
+a.uhp-link {
+    text-decoration: none;
+    color: white;
+}
+  
+a.uhp-link p {
+    padding: 14px 0px;
+}
+
+.uhp-console {
+    width: 400px;
+    height: fit-content;
+}
+  
+.uhp-console-balance {
+    background-color: #1b1d24;
+    width: 100%;
+    height: fit-content;
+    border-radius: 20px;
+}
+  
+.uhp-console-balance p {
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 3.5rem;
+}
+  
+.uhp-text-header {
+    font-size: 350%;
+}
+
+.uhp-text {
+    width: 400px;
+}
+  
+.uhp-console-withdraw-btn, .uhp-console-deposit-btn {
+    width: 190px;
+    height: 300px;
+    background-color: #72eb3a;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+  
+.uhp-console-withdraw-btn {
+    margin-right: 20px;
+}
+  
+.uhp-console-inner-btn {
+    background-color: #365a08;
+    width: 150px;
+    margin: 130px auto;
+    border: 2px solid white;
+}
+  
+.uhp-console-inner-btn:hover {
+    background-color: transparent;
+    transform: scale(1.05);
+    transition: 0.4s ease-in-out 0s;
+}
+
+div.user-home-page {
+    margin: 30px 0px 30px 0px;
+}
+
+@media only screen and (max-width: 450px) {
+    .uhp-console-withdraw-btn, 
+    .uhp-console-deposit-btn {
+        width: 165px;
+    }
+    .uhp-console, .uhp-text, table.it {
+        width: 350px;
+    }
+    .uhp-console-inner-btn {
+        width: 125px;
+        font-size: 1rem;
+    }
+    .uhp-console-balance p {
+        padding: 14px 16px;
+        text-align: center;
+        font-size: 3rem;
+    }
+      
+    .uhp-text-header {
+        font-size: 325%;
+    }
+}
+
+svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.it-header, .it-cells {
+    padding: 14px 16px;
+    border: 2px solid white;
+}
+
+.it-cells {
+    background-color: #1b1d24;
+}
+
+.it-header {
+    background-color: #72eb3a;
+    font-weight: bold;
+}
+table.it {
+    border: 2px solid white;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+table.tt {
+    min-width: 350px;
+}
+
+@media only screen and (max-width: 576px) {
+    table.it {
+        font-size: 0.8rem;
+        padding: 14px 0px;
+    }
+    h1.it-table-header, h1.investment-plan-header {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    table.it {
+        width: 350px;
+        font-size: 0.5rem;
+        padding: 14px 0px;
+    }
+
+    h1.it-table-header, h1.investment-plan-header {
+        font-size: 1.5rem;
+    }
+}

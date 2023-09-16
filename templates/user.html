@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="user-home-page">
+    <div class="uhp-text">
+        <h1 class="uhp-text-header">Welcome<br>{{ user }}&#128075;</h1><br>
+        <p>Are you looking to grow your money for the long term? Do you want to generate regular income from your investments? Or are you looking for a balance of growth and income? Whatever your financial goals, Joshua Bank can help you create an investment portfolio that is right for you. Check below.</p><br>
+        <svg id="changeColor" fill="#DC7633" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" zoomAndPan="magnify" viewBox="0 0 375 374.9999" height="100" version="1.0"><defs><path id="pathAttribute" d="M 11.972656 11.972656 L 359.222656 11.972656 L 359.222656 359.222656 L 11.972656 359.222656 Z M 11.972656 11.972656 " fill="#ffffff"></path></defs><g><path id="pathAttribute" d="M 185.597656 359.222656 C 89.675781 359.222656 11.972656 280.984375 11.972656 185.597656 C 11.972656 90.210938 89.675781 11.972656 185.597656 11.972656 C 281.519531 11.972656 359.222656 89.675781 359.222656 185.597656 C 359.222656 281.519531 280.984375 359.222656 185.597656 359.222656 Z M 185.597656 22.691406 C 95.570312 22.691406 22.691406 95.570312 22.691406 185.597656 C 22.691406 275.625 95.570312 348.503906 185.597656 348.503906 C 275.625 348.503906 348.503906 275.625 348.503906 185.597656 C 348.503906 95.570312 275.089844 22.691406 185.597656 22.691406 Z M 185.597656 22.691406 " fill-opacity="1" fill-rule="nonzero" fill="#ffffff"></path></g><g id="inner-icon" transform="translate(85, 75)"> <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" id="IconChangeColor"> <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" id="mainIconPathAttribute" fill="#ffffff" stroke-width="0" stroke="#ff0000"></path> </svg> </g></svg>   
+    </div>
+    <div class="uhp-console">
+        <div class="uhp-console-balance">
+            <p>${{ balance }}</p>
+        </div>
+        <div class="uhp-console-btns">
+            <div class="uhp-console-withdraw-btn">
+                <div class="uhp-console-inner-btn"><a href="{{ url_for('withdraw') }}" class="uhp-link">
+                        <p>WITHDRAW</p>
+                    </a></div>
+            </div>
+            <div class="uhp-console-deposit-btn">
+                <div class="uhp-console-inner-btn"><a href="{{ url_for('deposit') }}" class="uhp-link">
+                        <p>DEPOSIT</p>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="investment-plan-section">
+    <div class="investment-plan-content">
+      <h1 class="investment-plan-header">Investment Portfolios</h1>
+      <div class="investment-plan-cards">
+        <div class="investment-plan-card">
+          <h2 class="investment-plan-card-header">Growth Portfolio</h2>
+          <div class="investment-plan-card-text">
+            <p class="ip-text">&#9989;  For investors who are looking to grow their money over the long term.</p>
+            <p class="ip-text">&#9989;  Invested primarily in stocks. <span class="invisible-text">dsadadwdawd</span></p>
+            <p class="ip-text">&#9989;  Potential to generate high returns over time.</p>
+            <div class="ip-btn-text"><p>Grow Your Money</p></div>
+          </div>
+        </div>
+        <div class="investment-plan-card">
+          <h2 class="investment-plan-card-header">Income Portfolio</h2>
+                  <div class="investment-plan-card-text">
+            <p class="ip-text">&#9989;  For investors who are looking to generate income from their investments.</p>
+            <p class="ip-text">&#9989;  Invested primarily in bonds. <span class="invisible-text">dsadadwdawd</span></p>
+            <p class="ip-text">&#9989;  Pays interest on a regular basis. <span class="invisible-text">dsadadwdawd</span></p>
+            <div class="ip-btn-text"><p>Generate Income</p></div>
+          </div>
+        </div>
+        <div class="investment-plan-card">
+          <h2 class="investment-plan-card-header">Balanced Portfolio</h2>
+                  <div class="investment-plan-card-text">
+            <p class="ip-text">&#9989;  Good option for investors who are looking for a moderate level of risk and return.</p>
+            <p class="ip-text">&#9989;  This portfolio is a mix of stocks and bonds.</p>
+            <p class="ip-text">&#9989;  designed to provide a balance of growth and income.</p>
+            <div class="ip-btn-text"><p>Reduce your risk</p></div>
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>
+
+<div class="investment-table-content">
+    <h1 class="it-table-header">Choosing the Right Investment Portfolio</h1>
+    <div class="investment-table">
+        <table class="it">
+            <tr class="it-row-header">
+                <td class="it-header">Plan</td>
+                <td class="it-header">Cost</td>
+                <td class="it-header">Risk</td>
+                <td class="it-header">Target Returns</td>
+                <td class="it-header">Time Horizon</td>
+            </tr>
+            <tr class="it-rows">
+                <td class="it-cells">Growth Portfolio</td>
+                <td class="it-cells">$10,000</td>
+                <td class="it-cells">High</td>
+                <td class="it-cells">10-15% </td>
+                <td class="it-cells">10+ years</td>
+            </tr>
+            <tr class="it-rows">
+                <td class="it-cells">Income Portfolio</td>
+                <td class="it-cells">$5,000</td>
+                <td class="it-cells">Low</td>
+                <td class="it-cells">5-7%</td>
+                <td class="it-cells">5-10 years</td>
+            </tr>
+            <tr class="it-rows">
+                <td class="it-cells">Balanced Portfolio</td>
+                <td class="it-cells">$7,500</td>
+                <td class="it-cells">Moderate</td>
+                <td class="it-cells">7-9%</td>
+                <td class="it-cells">7-10 years</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

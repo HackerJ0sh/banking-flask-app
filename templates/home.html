@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home-content">
+    <div class="home-text">
+      <h1 class="home-heading">BANK<br>WITH<br>JOSHUA BANK</h1>
+      <div class="home-btn"><p><a href="{{ url_for('login') }}">Login</a></p></div>
+      <div class="home-btn"><p><a href="{{ url_for('signup') }}">Sign Up</a></p></div>
+    </div>
+    <div class="home-pic"></div>
+</div>
+<div class="about-us-section">
+  <div class="about-us-content">
+    <div class="about-us-pic"></div>
+    <div class="about-us-text">
+      <h1>About Joshua Bank</h1>
+      <p>
+        At Joshua Bank, we believe in redefining the way you experience banking. With a commitment to innovation, personalized service, and a deep-rooted dedication to your financial well-being, we aim to be more than just a bank. We're your financial partner, here to support you in every step of your journey towards financial success. Welcome to a new era of banking with Joshua Bank.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="profile-content">
+  <div class="profile-text">
+    <h1>Hi, I'm Joshua &#128075;</h1>
+    <p>I am a Year 1 student currently studying in the Diploma of CyberSecurity & Digital forensics at Nanyang Polytechnic.</p><br>
+    <p>This web application was made using the <i>flask</i> framework in python.</p>
+    <p class="profile-link"><a href="https://github.com/HackerJ0sh/HackerJ0sh.github.io">Github</a> | <a href="https://www.instagram.com/joshualimmmmmm/">Instagram</a></p>
+  </div>
+  <div class="profile-pic"></div>
+</div>
+{% endblock %}

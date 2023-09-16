@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: helios;
+}
+
+@font-face {
+    font-family: helios;
+    src: url(../../static/heliosext-bold.otf)
+}
+
+html {
+    font-family: system-ui;
+    font-weight: bold;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b1d24; 
+    color: white;
+    position: sticky;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar div {
+    padding: 30px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li.dropdown-link a {
+    color: white;
+}
+
+li.navbar-link {
+    display: inline-block;
+    margin: 0px 30px 0px 30px;
+    border-bottom: 2px solid #1b1d24;
+}
+ul {
+    margin: 0;
+}
+ul.dropdown-links {
+    list-style-type: none;
+}
+/* Test env */ 
+li.navbar-link:hover {
+    border-bottom: 2px solid white;
+}
+
+p.nav-text {
+    padding: 5px 5px;
+}
+
+/* end of test env */ 
+
+li.dropdown-link {
+    text-align: center;
+    padding: 30px 16px;
+    font-weight: bold;
+}
+
+li.dropdown-link-mobile {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #1b1d24;
+    opacity: 0;
+}
+
+#dropdown p:hover {
+    background-color: rgba(99, 99, 99, 0.6);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.active-dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+/* footer styling */ 
+
+p.footer-content {
+    text-align: center;
+    color: white;
+    padding: 40px 30px;
+}
+  
+.footer {
+    background-color: #1b1d24;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    position: static;
+    bottom: 0;
+}
+
+
+/* message flashing */
+
+.flash-msg-div {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b1d24;
+    margin: 14px 16px;
+    border-radius: 10px;
+}
+
+
+.flash-msg {
+    padding: 14px 16px;
+}
+
+.flash-btn {
+    background-color: #1b1d24;
+    height: fit-content;
+    width: fit-content;
+    margin: 14px 16px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.flash-btn:hover {
+    background-color: rgba(99, 99, 99, 0.6);
+}
+
+
+/* responsive */ 
+
+@media only screen and (max-width: 856px) {
+    .links {
+        display: none;
+    }
+    li.dropdown-link-mobile {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    div.home-text, 
+    div.home-pic, 
+    div.about-us-pic, 
+    div.about-us-text, 
+    div.profile-text, 
+    div.profile-pic {
+        width: 350px;
+    }
+
+    div.profile-pic {
+        border-radius: 175px;
+        height: 350px;
+    }
+
+    div.about-us-pic, div.home-pic {
+        height: 360px;
+    }
+
+    .home-text h1 {
+        font-size: 325%;
+    }
+
+    div.profile-pic, div.home-pic, div.about-us-text {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    div.home-text, 
+    div.home-pic, 
+    div.about-us-pic, 
+    div.about-us-text, 
+    div.profile-text, 
+    div.profile-pic {
+        width: 325px;
+    }
+
+    div.profile-pic {
+        border-radius: 162.5px;
+        height: 325px;
+    }
+
+    div.about-us-pic, div.home-pic {
+        height: 335px;
+    }
+
+    .home-text h1 {
+        font-size: 300%;
+    }
+
+    div.profile-pic, div.home-pic, div.about-us-text {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    div.profile-pic, 
+    div.home-pic, 
+    div.about-us-text,
+    .uhp-console {
+        margin-top: 50px;
+    }
+}
